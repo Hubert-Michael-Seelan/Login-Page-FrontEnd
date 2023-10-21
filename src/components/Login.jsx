@@ -11,7 +11,7 @@ export default function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:4000/login", { email, password })
+      .post("https://login-page-au2s.onrender.com/login", { email, password })
       .then((result) => {
         console.log(result);
         if (result.data === "Success") {
