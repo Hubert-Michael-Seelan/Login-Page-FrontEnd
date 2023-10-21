@@ -4,7 +4,6 @@ import axios from "axios";
 import { useState } from "react";
 
 export default function Login() {
-  const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const navigate = useNavigate();
@@ -12,7 +11,7 @@ export default function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:4000/login", { name, email, password })
+      .post("http://localhost:4000/login", { email, password })
       .then((result) => {
         console.log(result);
         if (result.data === "Success") {
